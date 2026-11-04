@@ -5,7 +5,7 @@ import vehiculos.Vehiculo;
 import java.security.PublicKey;
 
 public class Administrador extends Usuario{
-    private enum Rol{JEFE,VENDEDOR}
+    public enum Rol{JEFE,VENDEDOR}
     private Rol rol;
 
     public Administrador(String nombreUsuario, String contrasenya, int id, int anyoNacimiento, Rol rol) {
