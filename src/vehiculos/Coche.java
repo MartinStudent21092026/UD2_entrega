@@ -49,6 +49,7 @@ public class Coche extends Vehiculo {
     public boolean esPotente() {
         return this.caballos > 200;
     }
+
     //Se declaro este metodo para que devuelva en un String las caracteristicas del objeto
     public String toString() {
         return "[Coche]" + this.getModelo() + ", de " + this.getMarca() + " (" + this.getPrecioPorDia() + "€/día)";

@@ -1,10 +1,11 @@
 package vehiculos;
 
 public class Vehiculo {
+    //Se declara las variables
     private String modelo;
     private int numeroPlazas ;
     private double precioPorDia;
-
+    //Se declara los constructores
     public Vehiculo(String modelo, int numeroPlazas, double precioPorDia) {
         this.modelo = modelo;
         this.numeroPlazas = numeroPlazas;
@@ -13,7 +14,7 @@ public class Vehiculo {
     public Vehiculo(){
 
     }
-
+    //Se declara los metodos get y set
     public String getModelo() {
         return modelo;
     }
@@ -37,9 +38,11 @@ public class Vehiculo {
     public void setPrecioPorDia(double precioPorDia) {
         this.precioPorDia = precioPorDia;
     }
+    //Se declara un metodo para calcular el precio
     public int calcularPrecio(int numeVehiculos, int dias){
         return numeVehiculos*dias;
     }
+    //Se declaro este metodo para que devuelva en un String las caracteristicas del objeto
     public String toString(){
         return "[Vehiculo]"+this.modelo+" ("+this.precioPorDia+"€/día)";
     }

@@ -4,10 +4,13 @@ import vehiculos.Vehiculo;
 
 import java.security.PublicKey;
 
-public class Administrador extends Usuario{
-    public enum Rol{JEFE,VENDEDOR}
+public class Administrador extends Usuario {
+    //Se declara las variables
+    public enum Rol {JEFE, VENDEDOR}
+
     private Rol rol;
 
+    //Se declara los constructores
     public Administrador(String nombreUsuario, String contrasenya, int id, int anyoNacimiento, Rol rol) {
         super(nombreUsuario, contrasenya, id, anyoNacimiento);
         this.rol = rol;
@@ -24,13 +27,19 @@ public class Administrador extends Usuario{
     public void setRol(Rol rol) {
         this.rol = rol;
     }
-    public void asignarVehiculo(Cliente cliente, Vehiculo vehiculo){
+
+    //Se asigna un vehiculo
+    public void asignarVehiculo(Cliente cliente, Vehiculo vehiculo) {
         cliente.setVehiculo(vehiculo);
     }
-    public void retirarVehiculo(Cliente cliente){
+
+    //Se retira un vehiculo
+    public void retirarVehiculo(Cliente cliente) {
         cliente.setVehiculo(null);
     }
-    public String toString(){
-        return "Administrador "+this.getNombreUsuario()+"("+this.getId()+")";
+
+    //Se declaro este metodo para que devuelva en un String las caracteristicas del objeto
+    public String toString() {
+        return "Administrador " + this.getNombreUsuario() + "(" + this.getId() + ")";
     }
 }
