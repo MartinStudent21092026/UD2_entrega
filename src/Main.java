@@ -16,6 +16,7 @@ public class Main {
         Cliente usuario1 = new Cliente("Pepito","pepito1234",34,2000,c1,23);
         Cliente usuario2 = new Cliente("Mario","mario1234",3,2004,m1,45);
         Administrador usuario3 = new Administrador("Andrea","Andrea1234",45,2003,Administrador.Rol.JEFE);
+        usuario3.asignarVehiculo(usuario1,m2);
 
 
 

@@ -1,9 +1,11 @@
 package vehiculos;
 
 public class Furgoneta extends Vehiculo {
+    //Se declara las variables
     private String fabricante;
     private double volumenCarga;
 
+    //Se declara los constructores
     public Furgoneta(String modelo, int numeroPlazas, double precioPorDia, String fabricante, double volumenCarga) {
         super(modelo, numeroPlazas, precioPorDia);
         this.fabricante = fabricante;
@@ -14,6 +16,7 @@ public class Furgoneta extends Vehiculo {
 
     }
 
+    //Se declara los metodos get y set
     public String getFabricante() {
         return fabricante;
     }
@@ -29,13 +32,19 @@ public class Furgoneta extends Vehiculo {
     public void setVolumenCarga(double volumenCarga) {
         this.volumenCarga = volumenCarga;
     }
-    public boolean esGrande(){
-        return this.volumenCarga>=20;
+
+    //Se crea un metodo para confirmar si el volumen de carga supera un determinado valor
+    public boolean esGrande() {
+        return this.volumenCarga >= 20;
     }
-    public boolean cabeVolumen(double volumen){
-        return this.volumenCarga>volumen;
+
+    //Se creo un metodo para comparar el volumen dado como parametro con el del objeto
+    public boolean cabeVolumen(double volumen) {
+        return this.volumenCarga > volumen;
     }
-    public String toString(){
-        return "[Furgoneta]"+this.getModelo()+", de "+this.fabricante+"("+this.getPrecioPorDia()+" €/día)";
+
+    //Se declaro este metodo para que devuelva en un String las caracteristicas del objeto
+    public String toString() {
+        return "[Furgoneta]" + this.getModelo() + ", de " + this.fabricante + "(" + this.getPrecioPorDia() + " €/día)";
     }
 }
